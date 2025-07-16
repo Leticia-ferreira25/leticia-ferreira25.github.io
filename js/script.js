@@ -81,7 +81,13 @@
                 backToTopButton.classList.add('hidden');
             }
         }
+        // --- Lógica do Menu Hamburger ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
         // --- Inicialização ---
         window.addEventListener('resize', initCanvas);
         window.addEventListener('scroll', handleBackToTopButton);
