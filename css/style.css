@@ -8,6 +8,14 @@
             color: #131313; /* brand-black */
             overflow-x: hidden;
         }
+        /* --- Menu Hamburger  --- */
+        .hamburger {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            transition: all 0.25s;
+            position: relative;
+        }
         /* --- Seção de Hero --- */
         #background-canvas {
             position: absolute;
