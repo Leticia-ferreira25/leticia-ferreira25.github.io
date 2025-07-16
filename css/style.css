@@ -1,0 +1,113 @@
+        /* Adicionado para rolagem suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* brand-light */
+            color: #131313; /* brand-black */
+            overflow-x: hidden;
+        }
+        /* --- Seção de Hero --- */
+        #background-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.2;
+        }
+        .hero-section {
+            background-color: #131313; /* brand-black */
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-highlight {
+            color: #1cf527ef; /* brand-lime */
+        }
+        .circle-container {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .circle-svg {
+            animation: rotate 20s linear infinite;
+            transform-origin: center;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* --- Seção Stack --- */
+        .glass-heart {
+            filter: drop-shadow(0 0 15px #1c46f566);
+        }
+        .marquee {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .dark .marquee {
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+        .marquee-content {
+            flex-shrink: 0;
+            display: flex;
+            justify-content: flex-start;
+            min-width: 100%;
+            animation: marquee 60s linear infinite;
+        }
+        .marquee-item {
+            flex-shrink: 0;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+            font-weight: 500;
+            gap: 0.75rem;
+            border-right: 1px solid #e5e7eb;
+        }
+        .dark .marquee-item {
+             border-right: 1px solid #333;
+        }
+        .marquee-item img {
+            height: 24px;
+            width: 24px;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* --- Seção de Experiência --- */
+        .experience-card-light {
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+        .experience-card-light:hover {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        .experience-card-dark {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+        .experience-card-dark:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #444;
+            transform: translateY(-5px);
+        }
+    
