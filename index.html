@@ -9,12 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Ícone do Menu Móvel (Botão) - ALTERADO -->
-    <div class="md:hidden" id="mobile-menu-button">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-    </div>
     <script>
         tailwind.config = {
             theme: {
@@ -51,15 +45,6 @@
                         </svg>
                     </div>
                 </nav>
-                <!-- Menu Móvel (Dropdown) - ADICIONADO -->
-                <div id="mobile-menu" class="hidden md:hidden bg-brand-black bg-opacity-90 absolute top-full left-0 w-full z-20">
-                    <div class="flex flex-col items-center space-y-6 py-8 text-slate-300">
-                        <a href="#sobre" class="hover:text-white transition-colors mobile-link">Sobre</a>
-                        <a href="#trabalhos" class="hover:text-white transition-colors mobile-link">Trabalhos</a>
-                        <a href="#experiencias" class="hover:text-white transition-colors mobile-link">Experiências</a>
-                        <a href="#contato" class="hover:text-white transition-colors mobile-link">Contato</a>
-                    </div>
-                </div>
             </header>
             <main class="flex-grow flex items-center px-8 md:px-16">
                 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
