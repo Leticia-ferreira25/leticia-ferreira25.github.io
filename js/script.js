@@ -92,18 +92,3 @@
             setFooterYear();
             handleBackToTopButton(); // Executa uma vez no carregamento
         };
-        // --- ///
-        document.addEventListener('DOMContentLoaded', function () {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');// Função para alternar (mostrar/esconder) o menu móvel
-        mobileMenuButton.addEventListener(&#39;click&#39;, () =&gt; {
-            mobileMenu.classList.toggle(&#39;hidden&#39;);
-        });
-        
-        // Função para fechar o menu ao clicar em um link
-        mobileLinks.forEach(link =&gt; {
-            link.addEventListener(&#39;click&#39;, () =&gt; {
-                mobileMenu.classList.add(&#39;hidden&#39;);
-            });
-        });
