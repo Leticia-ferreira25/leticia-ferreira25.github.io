@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<header class="w-full px-8 md:px-16 py-6">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto">
-        <div class="text-2xl font-bold">Letícia <span class="font-light">Ferreira</span></div>
-        
-        <div class="hidden md:flex items-center space-x-8 text-sm text-slate-300">
-            <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
-            <a href="#trabalhos" class="hover:text-white transition-colors">Trabalhos</a>
-            <a href="#experiencias" class="hover:text-white transition-colors">Experiências</a>
-            <a href="#contato" class="hover:text-white transition-colors">Contato</a>
-        </div>
-        
-        <div class="md:hidden" id="mobile-menu-button">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-        </div>
-    </nav> <div id="mobile-menu" class="hidden md:hidden bg-brand-black bg-opacity-80 absolute top-full left-0 w-full">
-        <div class="flex flex-col items-center space-y-4 py-8 text-slate-300">
-            <a href="#sobre" class="hover:text-white transition-colors mobile-link">Sobre</a>
-            <a href="#trabalhos" class="hover:text-white transition-colors mobile-link">Trabalhos</a>
-            <a href="#experiencias" class="hover:text-white transition-colors mobile-link">Experiências</a>
-            <a href="#contato" class="hover:text-white transition-colors mobile-link">Contato</a>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letícia Ferreira - Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Ícone do Menu Móvel (Botão) - ALTERADO -->
+    <div class="md:hidden" id="mobile-menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
     </div>
-</header>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#1c46f5',
+                        'brand-black': '#131313',
+                        'brand-lime': '#d2ff52',
+                        'brand-light': '#f7f7f7',
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
 <body class="text-brand-black">
     <!-- Seção Hero -->
     <div id="home" class="hero-section text-brand-light">
@@ -45,6 +51,15 @@
                         </svg>
                     </div>
                 </nav>
+                <!-- Menu Móvel (Dropdown) - ADICIONADO -->
+                <div id="mobile-menu" class="hidden md:hidden bg-brand-black bg-opacity-90 absolute top-full left-0 w-full z-20">
+                    <div class="flex flex-col items-center space-y-6 py-8 text-slate-300">
+                        <a href="#sobre" class="hover:text-white transition-colors mobile-link">Sobre</a>
+                        <a href="#trabalhos" class="hover:text-white transition-colors mobile-link">Trabalhos</a>
+                        <a href="#experiencias" class="hover:text-white transition-colors mobile-link">Experiências</a>
+                        <a href="#contato" class="hover:text-white transition-colors mobile-link">Contato</a>
+                    </div>
+                </div>
             </header>
             <main class="flex-grow flex items-center px-8 md:px-16">
                 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -196,7 +211,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
