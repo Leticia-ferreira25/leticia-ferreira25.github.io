@@ -92,27 +92,3 @@
             setFooterYear();
             handleBackToTopButton(); // Executa uma vez no carregamento
         };
-        // Adicione este código ao seu arquivo js/script.js
-document.addEventListener('DOMContentLoaded', function () {
-
-    // Seleciona o botão do menu e o menu dropdown pelos IDs.
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    // Verifica se os elementos existem para evitar erros.
-    if (mobileMenuButton && mobileMenu) {
-        
-        // Adiciona um "ouvinte" de clique ao botão.
-        mobileMenuButton.addEventListener('click', () => {
-            // Alterna a classe 'hidden' do Tailwind para mostrar/esconder o menu.
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Adiciona um "ouvinte" aos links do menu para fechá-lo após o clique.
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    }
